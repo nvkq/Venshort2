@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Catppuccin Mocha Theme Variables */
+:root {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+
+  /* Semantic Colors */
+  --bg0: var(--base);
+  --bg1: var(--surface0);
+  --bg2: var(--surface1);
+  --bg3: var(--surface2);
+  --fg0: var(--text);
+  --fg1: var(--subtext1);
+  --grey0: var(--overlay0);
+  --grey1: var(--overlay1);
+  --grey2: var(--overlay2);
+  --accentRed: var(--red);
+  --accentOrange: var(--peach);
+  --accentYellow: var(--yellow);
+  --accentGreen: var(--green);
+  --accentTeal: var(--teal);
+  --accentBlue: var(--blue);
+  --accentSky: var(--sky);
+  --accentMauve: var(--mauve);
+  --accentPink: var(--pink);
+  --accentLavender: var(--lavender);
+  --accentAqua: var(--teal); /* Alias for Teal */
+  --accentPurple: var(--mauve); /* Alias for Mauve */
+}
+
+/* Dark mode is the default */
+html.dark {
+  /* Same as :root */
+}
+
+/* Light Theme Variables (Catppuccin Latte) */
+html.light {
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+  --text: #4c4f69;
+  --subtext1: #5c5f77;
+  --subtext0: #6c6f85;
+  --overlay2: #7c7f93;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--bg0);
+  color: var(--fg0);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General Layout & Content */
+.main-container {
+  flex: 1;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--overlay0);
+  border-radius: 10px;
+  border: 2px solid var(--bg1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--overlay1);
+}
+
